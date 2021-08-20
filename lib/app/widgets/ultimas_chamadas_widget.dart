@@ -5,11 +5,10 @@ import 'package:project_painel_de_chamada/app/models/painel_chamada_model.dart';
 import 'package:project_painel_de_chamada/app/styles/style.dart';
 
 class UltimasChamadasWidget extends StatelessWidget {
-  late List<PainelChamadaModel> brasileiros;
+  late List<PainelChamadaModel> painelChamadaData;
 
-  UltimasChamadasWidget(List<PainelChamadaModel> brasilPainel) {
-    brasileiros = brasilPainel;
-    // print(brasileiros);
+  UltimasChamadasWidget(List<PainelChamadaModel> data) {
+    painelChamadaData = data;
   }
 
   @override
@@ -45,35 +44,33 @@ class UltimasChamadasWidget extends StatelessWidget {
                   label: Text('Status', style: myTextStyleBase.styleText),
                 ),
               ],
-              rows: List.generate(brasileiros.length, (index) {
+              rows: List.generate(painelChamadaData.length, (index) {
                 return DataRow(
                   color: MaterialStateProperty.resolveWith<Color?>(
-                      (Set<MaterialState> states) {
-                    // All rows will have the same selected color.
+                    (Set<MaterialState> states) {                    
                     if (states.contains(MaterialState.selected)) {
                       return Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withOpacity(0.08);
-                    }
-                    // Even rows will have a grey color.
+                        .colorScheme
+                        .primary
+                        .withOpacity(0.08);
+                    }                    
                     if (index.isEven) {
                       return Colors.grey.withOpacity(0.2);
                     }
-                    return null; // Use default value for other states and odd rows.
+                    return null;
                   }),
                   cells: <DataCell>[
                     DataCell(
-                      Text('${brasileiros[index].motorista!}'),
+                      Text('${painelChamadaData[index].motorista!}'),
                     ),
                     DataCell(
-                      Text('${brasileiros[index].placa!}'),
+                      Text('${painelChamadaData[index].placa!}'),
                     ),
                     DataCell(
-                      Text('${brasileiros[index].agendamento!}'),
+                      Text('${painelChamadaData[index].agendamento!}'),
                     ),
                     DataCell(
-                      Text('${brasileiros[index].gate!}'),
+                      Text('${painelChamadaData[index].gate!}'),
                     ),
                     DataCell(
                       Text('Primeira Chamada'),

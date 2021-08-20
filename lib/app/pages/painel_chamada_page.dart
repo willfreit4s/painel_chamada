@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_painel_de_chamada/app/controllers/painel_chamada_controller.dart';
+import 'package:project_painel_de_chamada/app/styles/style.dart';
 import 'package:project_painel_de_chamada/app/widgets/em_fila.dart';
 import 'package:project_painel_de_chamada/app/widgets/ultima_chamada_widget.dart';
 import 'package:project_painel_de_chamada/app/widgets/ultimas_chamadas_widget.dart';
@@ -65,8 +66,8 @@ class _PainelChamadaState extends State<PainelChamadaPage> {
         appBar: AppBar(
           centerTitle: true,
           title: Text('Painel de Chamadas',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          backgroundColor: Color.fromRGBO(4, 32, 74, 1),
+            style: myTextStyleBase.styleAppBar),
+            backgroundColor: Color.fromRGBO(4, 32, 74, 1),
         ),
         body: AnimatedBuilder(
           animation: controllerPainelChamada.state,
