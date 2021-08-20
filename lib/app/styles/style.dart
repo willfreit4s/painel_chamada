@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
 class myTextStyleBase {
-  static const styleText = TextStyle(fontWeight: FontWeight.bold);
+  static const styleText = TextStyle(
+    fontFamily: 'FiraSansBold',
+    fontWeight: FontWeight.bold
+  );
 
   static const styleTitle = TextStyle(
     fontSize: 24,
