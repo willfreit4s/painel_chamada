@@ -13,6 +13,7 @@ class myTextStyleBase {
   static const styleAppBar = TextStyle(
     fontSize: 24, 
     fontWeight: FontWeight.bold,
+    fontFamily: 'FiraSansBold'
   );
 
 }
