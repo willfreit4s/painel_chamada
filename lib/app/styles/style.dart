@@ -9,4 +9,10 @@ class myTextStyleBase {
     color: Color.fromRGBO(4, 32, 74, 1),
     fontFamily: 'FiraSansBold'
   );
+
+  static const styleAppBar = TextStyle(
+    fontSize: 24, 
+    fontWeight: FontWeight.bold,
+  );
+
 }
