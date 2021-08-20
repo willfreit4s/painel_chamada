@@ -32,7 +32,7 @@ class UltimaChamadaWidget extends StatelessWidget {
               ListTile(
                 title: Center(
                   child: Text(
-                    'Gate (${ultimaChamada.gate})',
+                    'Gate ${ultimaChamada.gate}',
                     style: myTextStyleBase.styleTitle,
                   ),
                 ),
@@ -46,11 +46,29 @@ class UltimaChamadaWidget extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: ListBody(
                             children: [
-                              Text('Motorista: ${ultimaChamada.motorista}'),
+                              Row(
+                                children: [
+                                  Text('Motorista: ',
+                                      style: myTextStyleBase.styleText),
+                                  Text('${ultimaChamada.motorista}'),                                
+                                ],
+                              ),
                               SizedBox(height: 8),
-                              Text('Placa: ${ultimaChamada.placa}'),
+                              Row(
+                                children: [
+                                  Text('Placa: ',
+                                      style: myTextStyleBase.styleText),
+                                  Text('${ultimaChamada.placa}'),                                
+                                ],
+                              ),
                               SizedBox(height: 8),
-                              Text('Agendamento: ${ultimaChamada.agendamento}'),
+                              Row(
+                                children: [
+                                  Text('Agendamento: ',
+                                      style: myTextStyleBase.styleText),
+                                  Text('${ultimaChamada.agendamento}'),                                
+                                ],
+                              ),
                             ],
                           ),
                         )
@@ -83,10 +101,21 @@ class UltimaChamadaWidget extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: ListBody(
                           children: [
-                            Text(
-                                'Janela: ${Jiffy(ultimaChamada.janelaDhi).format('HH:mm')} - ${Jiffy(ultimaChamada.janelaDhf).format('HH:mm')}'),
+                            Row(
+                                children: [
+                                  Text('Janela: ',
+                                      style: myTextStyleBase.styleText),
+                                  Text('${Jiffy(ultimaChamada.janelaDhi).format('HH:mm')} - ${Jiffy(ultimaChamada.janelaDhf).format('HH:mm')}'),                                
+                                ],
+                              ),
                             SizedBox(height: 8),
-                            Text('Pesagem: Não'),
+                            Row(
+                              children: [
+                                Text('Pesagem: ',
+                                    style: myTextStyleBase.styleText),
+                                Text('Não'),                                
+                              ],
+                            ),                         
                           ],
                         ),
                       )
@@ -97,10 +126,21 @@ class UltimaChamadaWidget extends StatelessWidget {
                     children: [
                       ListBody(
                         children: [
-                          Text(
-                              'Chegada: ${Jiffy(ultimaChamada.chegada).format('HH:mm')}'),
+                          Row(
+                              children: [
+                                Text('Chegada: ',
+                                    style: myTextStyleBase.styleText),
+                                Text('${Jiffy(ultimaChamada.chegada).format('HH:mm')}'),                                
+                              ],
+                            ),
                           SizedBox(height: 8),
-                          Text('Status: Primeira Chamada'),
+                          Row(
+                            children: [
+                              Text('Status: ',
+                                  style: myTextStyleBase.styleText),
+                              Text('Primeira Chamada'),                                
+                            ],
+                          ),                        
                         ],
                       )
                     ],
