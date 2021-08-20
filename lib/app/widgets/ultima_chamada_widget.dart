@@ -126,13 +126,14 @@ class UltimaChamadaWidget extends StatelessWidget {
                     children: [
                       ListBody(
                         children: [
-                          Row(
-                              children: [
-                                Text('Chegada: ',
-                                    style: myTextStyleBase.styleText),
-                                Text('${Jiffy(ultimaChamada.chegada).format('HH:mm')}'),                                
-                              ],
+                          RichText(
+                            text: TextSpan(                            
+                              children: <TextSpan>[
+                                TextSpan(text: 'Chegada: ', style: myTextStyleBase.styleText),                               
+                                TextSpan(text: '${Jiffy(ultimaChamada.chegada).format('HH:mm')}'),                               
+                              ]
                             ),
+                          ),
                           SizedBox(height: 8),
                           Row(
                             children: [
@@ -140,13 +141,13 @@ class UltimaChamadaWidget extends StatelessWidget {
                                   style: myTextStyleBase.styleText),
                               Text('Primeira Chamada'),                                
                             ],
-                          ),                        
+                          ),
                         ],
                       )
                     ],
                   )),
                 ],
-              )
+              ),
             ],
           ),
         ),
