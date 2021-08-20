@@ -47,19 +47,17 @@ class UltimasChamadasWidget extends StatelessWidget {
               rows: List.generate(painelChamadaData.length, (index) {
                 return DataRow(
                   color: MaterialStateProperty.resolveWith<Color?>(
-                      (Set<MaterialState> states) {
-                    // All rows will have the same selected color.
+                    (Set<MaterialState> states) {                    
                     if (states.contains(MaterialState.selected)) {
                       return Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withOpacity(0.08);
-                    }
-                    // Even rows will have a grey color.
+                        .colorScheme
+                        .primary
+                        .withOpacity(0.08);
+                    }                    
                     if (index.isEven) {
                       return Colors.grey.withOpacity(0.2);
                     }
-                    return null; // Use default value for other states and odd rows.
+                    return null;
                   }),
                   cells: <DataCell>[
                     DataCell(
