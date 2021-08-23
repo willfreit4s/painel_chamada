@@ -15,7 +15,8 @@ class UltimaChamadaWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        height: 320,
+        padding: EdgeInsets.fromLTRB(40, 24, 0, 0),
+        height: 392,
         child: Card(
           elevation: 7,
           child: Column(
