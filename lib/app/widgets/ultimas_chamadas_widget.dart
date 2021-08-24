@@ -61,7 +61,7 @@ class UltimasChamadasWidget extends StatelessWidget {
                         return Colors.grey.withOpacity(0.2);
                       }
                       return null;
-                    }),
+                    }),                   
                     cells: <DataCell>[
                       DataCell(
                         Text('${painelChamadaData[index].motorista!}'),
@@ -81,7 +81,7 @@ class UltimasChamadasWidget extends StatelessWidget {
                     ],
                   );
                 }),
-              )
+              ),
             ],
           ),
         ),

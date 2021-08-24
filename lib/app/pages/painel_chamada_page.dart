@@ -13,8 +13,7 @@ class PainelChamadaPage extends StatefulWidget {
 class _PainelChamadaState extends State<PainelChamadaPage> {
   final controllerPainelChamada = PainelChamadaController();
 
-  _success() async {
-    print(controllerPainelChamada.painelChamada);
+  _success() async {  
     return controllerPainelChamada.start();
   }
 
